@@ -1,0 +1,20 @@
+{
+  "name": "edge-ptt",
+  "version": "1.0.0",
+  "description": "Edge PTT",
+  "main": "dist/index.js",
+  "repository": "https://github.com/pTaunium/edge-ptt.git",
+  "author": "pTaunium <pTaunium@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.1.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "rollup": "^2.59.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
+  },
+  "packageManager": "yarn@3.1.0"
+}
