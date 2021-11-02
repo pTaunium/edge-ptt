@@ -1,0 +1,9 @@
+name = "edge-ptt"
+type = "javascript"
+workers_dev = true
+compatibility_date = "2021-11-02"
+
+[build]
+command = "yarn install && yarn build"
+[build.upload]
+format = "service-worker"
