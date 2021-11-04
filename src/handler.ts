@@ -1,8 +1,8 @@
 const getRealUrl = (pathname: string, search: string): string => {
-  if (pathname.startsWith('/ptt_static')) {
-    return `https://images.ptt.cc${pathname.replace('/ptt_static', '')}${search}`;
-  } else if (pathname.startsWith('/ptt_cache')) {
-    return `https://cache.ptt.cc${pathname.replace('/ptt_cache', '')}${search}`;
+  if (pathname.startsWith('/~static')) {
+    return `https://images.ptt.cc${pathname.replace('/~static', '')}${search}`;
+  } else if (pathname.startsWith('/~cache')) {
+    return `https://cache.ptt.cc${pathname.replace('/~cache', '')}${search}`;
   }
 
   return `https://www.ptt.cc${pathname}${search}`;
@@ -59,8 +59,8 @@ export const handleRequest = async (request: Request): Promise<Response> => {
     // For text response
     let text = await resp.text();
     text = text.replaceAll('https://www.ptt.cc', `${protocol}//${host}`);
-    text = text.replaceAll('//images.ptt.cc', '/ptt_static');
-    text = text.replaceAll('https://cache.ptt.cc', '/ptt_cache');
+    text = text.replaceAll('//images.ptt.cc', '/~static');
+    text = text.replaceAll('https://cache.ptt.cc', '/~cache');
 
     // Edit domain of Set-Cookie
     const headers = new Headers();
